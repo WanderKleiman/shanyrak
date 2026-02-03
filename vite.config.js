@@ -1,27 +1,24 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react()],
   base: '/',
   build: {
     outDir: 'dist',
-    minify: 'terser',
-    emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve('index.html'),
-        payment: resolve('payment.html'),
-        reports: resolve('reports.html'),
-        admin: resolve('admin.html'),
-        'admin-access': resolve('admin-access.html'),
-        fund: resolve('fund.html'),
-        'about-fund': resolve('about-fund.html'),
-        documents: resolve('documents.html'),
-        contacts: resolve('contacts.html'),
-        companies: resolve('companies.html'),
-        'partner-funds': resolve('partner-funds.html')
+        main: 'index.html',
+        payment: 'payment.html',
+        reports: 'reports.html',
+        admin: 'admin.html',
+        'admin-access': 'admin-access.html',
+        fund: 'fund.html',
+        'about-fund': 'about-fund.html',
+        documents: 'documents.html',
+        contacts: 'contacts.html',
+        companies: 'companies.html',
+        'partner-funds': 'partner-funds.html'
       }
     }
   }
