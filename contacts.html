@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Шанырак</title>
+    <meta name="description" content="Контактная информация фонда Шанырак">
+    
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106496443', 'ym');
+
+        ym(106496443, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <!-- /Yandex.Metrika counter -->
+    
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    @layer theme {
+        :root {
+            --primary-color: #35856c;
+            --secondary-color: #5856D6;
+            --accent-color: #FF3B30;
+            --success-color: #34C759;
+            --warning-color: #FF9500;
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F2F2F7;
+            --text-primary: #000000;
+            --text-secondary: #6C6C70;
+            --border-color: #E5E5EA;
+            --card-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            --button-radius: 12px;
+            --card-radius: 16px;
+        }
+    }
+
+    @layer components {
+        .card {
+            @apply bg-[var(--bg-primary)] rounded-[var(--card-radius)] p-4 shadow-[var(--card-shadow)];
+        }
+    }
+    </style>
+</head>
+<body class="bg-[var(--bg-secondary)]">
+    <noscript><div><img src="https://mc.yandex.ru/watch/106496443" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <div id="contacts-root"></div>
+    <script type="text/babel" src="contacts-app.js"></script>
+</body>
+</html>
