@@ -1,43 +1,28 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { resolve, dirname } from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  base: './',
+  base: '/',
   build: {
     outDir: 'dist',
     minify: 'terser',
-    sourcemap: false,
     emptyOutDir: true,
-    assetsDir: 'assets',
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
-        payment: resolve(__dirname, 'payment.html'),
-        reports: resolve(__dirname, 'reports.html'),
-        admin: resolve(__dirname, 'admin.html'),
-        'admin-access': resolve(__dirname, 'admin-access.html'),
-        fund: resolve(__dirname, 'fund.html'),
-        'about-fund': resolve(__dirname, 'about-fund.html'),
-        documents: resolve(__dirname, 'documents.html'),
-        contacts: resolve(__dirname, 'contacts.html'),
-        companies: resolve(__dirname, 'companies.html'),
-        'partner-funds': resolve(__dirname, 'partner-funds.html')
-      },
-      output: {
-        manualChunks: undefined
+        main: resolve('index.html'),
+        payment: resolve('payment.html'),
+        reports: resolve('reports.html'),
+        admin: resolve('admin.html'),
+        'admin-access': resolve('admin-access.html'),
+        fund: resolve('fund.html'),
+        'about-fund': resolve('about-fund.html'),
+        documents: resolve('documents.html'),
+        contacts: resolve('contacts.html'),
+        companies: resolve('companies.html'),
+        'partner-funds': resolve('partner-funds.html')
       }
     }
-  },
-  server: {
-    port: 3000
-  },
-  preview: {
-    port: 4173
   }
 });
